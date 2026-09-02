@@ -1,6 +1,7 @@
 package aula2;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Aluno {
     private String nome;
@@ -33,8 +34,18 @@ public class Aluno {
     public void setPontuacao(Integer pontuacao) {
         this.pontuacao = pontuacao;
     }
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Aluno aluno)) return false;
+        return Objects.equals(nome, aluno.nome) && Objects.equals(pontuacao, aluno.pontuacao);
+    }
 
-@Override
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, pontuacao);
+    }
+
+    @Override
     public String toString() {
         return nome;
     }

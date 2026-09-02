@@ -1,7 +1,6 @@
 package aula2;
 
 public class VetorLista {
-
     private Aluno[] alunos = new Aluno[100];
     private int totalDeAlunos = 0;
 
@@ -11,7 +10,7 @@ public class VetorLista {
     }
 
     public void adiciona(int posicao, Aluno aluno) {
-        if (!this.posicaoValida(posicao)) {
+        if (posicao<0 || posicao>totalDeAlunos) {
             throw new IllegalArgumentException("Posição inválida");
         }
 
@@ -24,15 +23,24 @@ public class VetorLista {
     }
 
     public Aluno pega(int posicao) {
-        if (!this.posicaoOcupada(posicao)) {
+        if (posicao < 0 && posicao >= this.totalDeAlunos) {
             throw new IllegalArgumentException("Posição inválida");
         }
 
         return this.alunos[posicao];
     }
 
+    public boolean contem(Aluno aluno) {
+        for (int i = 0; i < this.totalDeAlunos; i++) {
+            if (this.alunos[i].equals(aluno)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void remove(int posicao) {
-        if (!this.posicaoOcupada(posicao)) {
+        if (posicao < 0 && posicao >= this.totalDeAlunos) {
             throw new IllegalArgumentException("Posição inválida");
         }
 
@@ -43,26 +51,8 @@ public class VetorLista {
         this.totalDeAlunos--;
     }
 
-    public boolean contem(Aluno aluno) {
-        for (int i = 0; i < this.totalDeAlunos; i++) {
-            if (aluno == this.alunos[i]) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
     public int tamanho() {
         return this.totalDeAlunos;
-    }
-
-    private boolean posicaoOcupada(int posicao) {
-        return posicao >= 0 && posicao < this.totalDeAlunos;
-    }
-
-    private boolean posicaoValida(int posicao) {
-        return posicao >= 0 && posicao <= this.totalDeAlunos;
     }
 
     @Override

@@ -4,9 +4,7 @@ import aula2.Aluno;
 import aula2.VetorLista;
 
 public class TesteContemAluno {
-
     public static void main(String[] args) {
-
         Aluno a1 = new Aluno();
         Aluno a2 = new Aluno();
 

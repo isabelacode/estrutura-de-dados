@@ -1,4 +1,4 @@
-package aulas.ed1.testes;
+package aula2.testes;
 
 import aula2.Aluno;
 import aula2.VetorLista;
