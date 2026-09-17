@@ -64,4 +64,20 @@ public class VetorLista<T> implements ListaAPI<T> {
     public int tamanho() {
         return this.total;
     }
+
+    @Override
+    public String toString() {
+        if (this.total == 0) {
+            return "[]";
+        }
+
+        StringBuilder builder = new StringBuilder("[");
+        for (int i = 0; i < this.total - 1; i++) {
+            builder.append(this.elementos[i]);
+            builder.append(", ");
+        }
+        builder.append(this.elementos[this.total - 1]);
+        builder.append("]");
+        return builder.toString();
+    }
 }

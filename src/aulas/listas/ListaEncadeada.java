@@ -25,28 +25,30 @@ public class ListaEncadeada<T> implements ListaAPI<T> {
         if (pos < 0 || pos > this.total) {
             throw new IllegalArgumentException("Posição inválida");
         }
-        if(total == 0){
-            Celula<T> nova = new Celula<>(elemento);
+
+        if (pos == 0) {
+            Celula<T> nova = new Celula<>(this.primeira, elemento);
             this.primeira = nova;
             if (this.total == 0) {
                 this.ultima = nova;
-            } else{
-                Celula<T> anterior = this.primeira;
+            }
+        } else {
+            Celula<T> anterior = this.primeira;
 
-                for (int i = 0; i < pos - 1; i++) {
-                    anterior = anterior.getProxima();
-                }
+            for (int i = 0; i < pos - 1; i++) {
+                anterior = anterior.getProxima();
+            }
 
-                nova = new Celula<>(anterior.getProxima(), elemento);
+            Celula<T> nova = new Celula<>(anterior.getProxima(), elemento);
 
-                anterior.setProxima(nova);
+            anterior.setProxima(nova);
 
-                if (pos == this.total) {
-                    this.ultima = nova;
-                }
+            if (pos == this.total) {
+                this.ultima = nova;
             }
         }
-        total++;
+
+        this.total++;
     }
 
     @Override
