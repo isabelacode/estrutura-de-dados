@@ -1,7 +1,7 @@
-package aula2.testes;
+package aulas.testes;
 
-import aula2.Aluno;
-import aula2.VetorLista;
+import aulas.listas.Aluno;
+import aulas.listas.VetorLista;
 
 public class TesteRemovePorPosicao {
 
@@ -13,7 +13,7 @@ public class TesteRemovePorPosicao {
         a1.setNome("Rafael");
         a2.setNome("Paulo");
 
-        VetorLista lista = new VetorLista();
+        VetorLista<Aluno> lista = new VetorLista<>();
 
         lista.adiciona(a1);
         lista.adiciona(a2);

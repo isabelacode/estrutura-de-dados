@@ -1,7 +1,7 @@
-package aula2.testes;
+package aulas.testes;
 
-import aula2.Aluno;
-import aula2.VetorLista;
+import aulas.listas.Aluno;
+import aulas.listas.VetorLista;
 
 public class TesteAdicionaPorPosicao {
 
@@ -15,11 +15,11 @@ public class TesteAdicionaPorPosicao {
         a2.setNome("Paulo");
         a3.setNome("Ana");
 
-        VetorLista lista = new VetorLista();
+        VetorLista<Aluno> lista = new VetorLista<>();
 
         lista.adiciona(a1);
-        lista.adiciona(0, a2);
-        lista.adiciona(1, a3);
+        lista.adiciona(a2, 0);
+        lista.adiciona(a3, 1);
 
         System.out.println(lista);
     }

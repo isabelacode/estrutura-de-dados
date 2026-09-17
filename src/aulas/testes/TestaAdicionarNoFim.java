@@ -1,17 +1,22 @@
-package aula2.testes;
+package aulas.testes;
 
-import aula2.Aluno;
-import aula2.VetorLista;
+import aulas.listas.Aluno;
+import aulas.listas.VetorLista;
 
 public class TestaAdicionarNoFim {
-    static void main() {
+
+    public static void main(String[] args) {
         Aluno a1 = new Aluno();
         Aluno a2 = new Aluno();
+
         a1.setNome("João");
         a2.setNome("José");
-        VetorLista lista = new VetorLista();
+
+        VetorLista<Aluno> lista = new VetorLista<>();
+
         lista.adiciona(a1);
         lista.adiciona(a2);
+
         System.out.println(lista);
     }
 }
