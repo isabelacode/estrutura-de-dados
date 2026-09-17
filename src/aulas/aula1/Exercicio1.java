@@ -1,4 +1,4 @@
-package aula1;
+package aulas.aula1;
 
 import java.util.Scanner;
 
@@ -6,6 +6,7 @@ public class Exercicio1 {
     static void main(String[] args) {
         int[] A = new int[5];
         int[] B = new int[5];
+
         Scanner scan = new Scanner(System.in);
         System.out.println("A:");
         for (int i = 0; i < A.length; i++) {

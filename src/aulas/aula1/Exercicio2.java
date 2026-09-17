@@ -1,4 +1,5 @@
-package aula1;
+package aulas.aula1;
+
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -8,9 +9,7 @@ import java.util.Scanner;
 public class Exercicio2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         int casos = sc.nextInt();
-
         for (int c = 0; c < casos; c++) {
             int n = sc.nextInt();
 
