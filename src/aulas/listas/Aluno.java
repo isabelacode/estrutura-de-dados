@@ -1,4 +1,4 @@
-package aula2;
+package aulas.listas;
 
 import java.util.Objects;
 
