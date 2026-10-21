@@ -1,11 +1,11 @@
 package aulas.testes;
 
-import aulas.listas.ListaEncadeada;
+import aulas.listas.ListaEncadeadaDupla;
 
 public class TestaAdicionarNoFimListaEncadeada {
 
     public static void main(String[] args) {
-        ListaEncadeada<String> lista = new ListaEncadeada<>();
+        ListaEncadeadaDupla<String> lista = new ListaEncadeadaDupla<>();
 
         lista.adiciona("Rafael");
         lista.adiciona("Paulo");

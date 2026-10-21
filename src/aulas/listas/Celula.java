@@ -4,6 +4,8 @@ public class Celula<T> {
 
     private T elemento;
     private Celula<T> proxima;
+    private Celula<T> anterior;
+
 
     public Celula(T elemento) {
         this.elemento = elemento;
@@ -24,5 +26,13 @@ public class Celula<T> {
 
     public void setProxima(Celula<T> proxima) {
         this.proxima = proxima;
+    }
+
+    public Celula<T> getAnterior() {
+        return anterior;
+    }
+
+    public void setAnterior(Celula<T> anterior) {
+        anterior = anterior;
     }
 }
